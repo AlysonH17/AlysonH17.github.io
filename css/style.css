@@ -1,0 +1,186 @@
+#titulo { 
+    color:pink;
+}
+
+#titulo:hover {
+    color: brown;
+}
+
+.especial { /* A todas las etiquetas con la clase especial: */
+    color: purple;
+}
+
+p.texto { /* A todas las etiquetas de p que contentan tambien una clase de texto: */
+    color: cyan;
+}
+
+p.especial { /* A todas las etiquetas de p que contentan tambien una clase especial: */
+    color: orange;
+}
+
+div p { /*En todas etiq div que tengan hijos p (o nietos o mas): */
+ color: green;
+}
+
+div h2, div h3 { /* A todas las etiquetas h2 y h3 que esten dentro de un div: */
+    color: red;
+}
+
+* { /** Va a cambiar las propiedades solo si no han sido definidas*/
+    font-size: 24px;
+    /* color: black; */
+}
+
+.color {
+    color: #4aaced; 
+    color: rgb(255, 0, 0);
+    border: 5px yellow solid; /*dotted, dashed, double, none, hidden y tridimensional: groove, ridge, inset, outset,*/
+    /* Propiedades border */
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1pc;
+}
+
+#fondo {
+    color: green;
+    background-color: rgba(255, 0, 255, 0.7); /* rgba: rojo, verde, azul, opacidad: 1(solido), 0(transparente)*/
+    height: 100px;
+    opacity: 1; /* Opacidad de la etiqueta completa*/
+    background-image: url('img1.jpeg'); 
+    background-size: 100px 100px; /* cover, contain, auto, 100px 100px, 50% 50%*/
+    background-repeat: repeat-y; /* repeat, repeat-x, repeat-y, no-repeat */
+    background-position: right center; /* top, bottom, left, right, center, 50% 50%*/
+    
+    background: rgb(252, 154, 180) url('img1.jpeg') no-repeat center center / 100px 100px; /* Mas corto */
+}
+
+.margen {
+    background-color: turquoise;
+    margin: 15px 20px 25px 30px; /* Arriba, derecha, abajo, izquierda. Margen fuera */
+    padding: 30px 25px 20px 15px; /* Arriba, derecha, abajo, izquierda. Margen dentro */
+    border: 1px solid black; /* Justo en el centro de margin y padding */
+    /* Parametros de Margen y padding se pueden usar igual */
+    margin: 15px; /* Si es el mismo valor para todos los lados */
+    padding: 30px 15px; /* Vertical, horizontal */
+    padding: 30px 15px 20px; /* Arriba, horizontal, abajo */
+
+    height: 100px;
+    width: 50px;
+    overflow: scroll; /* auto, hidden, visible, scroll */
+    outline: 1px solid red; /* Entre border y margin */
+}
+
+.text {
+    text-align: center; /* left, right, justify, start, end */
+    text-decoration: underline; /* none, overline, line-through, underline */
+    text-transform: capitalize; /* none, capitalize, lowercase, uppercase */
+    text-shadow: 3px 3px 5px #f0bf3980; /* Desplazamiento horizontal, vertical, desenfoque, color */
+    font-family: 'Times New Roman', Helvetica, sans-serif; /* Fuente, si no existe la primera, se usa la segunda, etc. */
+    /* Si no esta la fuente: google fonts, selecciono unicamente las que vaya a usar, get font, link, copy y en el head html */
+    font-family: 'Caprasimo', Arial;
+}
+
+/* Enlaces (En ese orden especifico) */
+a:link { /* A los enlaces que no han sido visitados: */
+    color: blueviolet;
+}
+
+a:visited { /* A los enlaces que ya han sido visitados: */
+    color: gray;
+}
+
+a:hover { /* A los enlaces cuando se pasa el raton por encima: */
+    color: red;
+}
+
+a:active { /* A los enlaces cuando se pulsa: */
+    color: green;
+}
+
+/* listas */
+ul {
+    list-style-type: square; 
+    list-style-position: inside; /* inside, outside */
+}
+
+/* tabla */
+table {
+    width: 100%;
+    border-collapse: collapse; /* collapse, separate */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: gray;
+    color: white;
+    text-align: right;
+}
+
+tr:nth-child(even) { /* Selecciona las filas impares (odd para pares) */
+    background-color: lightgray; 
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* inline, inline-block, flex, grid, table, table-cell */
+span {
+    display: none; /* Oculta el elemento */
+    /*visibility: hidden;  Oculta el elemento, pero ocupa el espacio */
+    display: block; /* Ocupa toda la linea*/
+    max-width: 300px; /* Tiene este ancho, pero puede ser menor (p.e. si se achica la ventana)*/
+    background-color: lightsalmon;
+}
+
+.inline {
+    display: inline; /* Ocupa solo el espacio necesario, no inicia una nueva linea */
+    display: inline-block; /* Ocupa el espacio necesario, pero permite definir ancho y alto */
+    height: 55px;
+    background-color: lightblue;
+}
+
+#position {
+    position: relative; /* Posiciona el elemento relativo a su posicion original */
+    top: 30px; 
+    left: 20px; 
+
+    position: fixed; /* Fijo en la pantalla, no se mueve al hacer scroll */
+    position: absolute; /* Posicion relativa respecto al padre mas cercano */
+    position: sticky; /* Se queda fijo al hacer scroll hasta que se sale de su contenedor */
+}
+
+.left {
+    float: left; /* Flota a la izquierda */
+    width: 100px;
+}
+
+.right {
+    float: right; /* Flota a la derecha */
+    width: 100px;
+}
+
+.container {
+    height: 200px;
+}
+
+.card {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px 0;
+    width: 33%;
+}
+
+.center { /* Para centrar un elemento siempre se le debe asignar un ancho >100% */
+    width: 200px;
+    margin: 0 auto; 
+    background-color: lightgreen;
+    text-align: center;
+    padding: 50px 0px;
+}
