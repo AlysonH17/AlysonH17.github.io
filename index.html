@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Akima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link a un archivo css -->
+</head>
+<body>
+    <header> <!-- Agrupar links/img, no se puede dentro de una etiqueta header/footer -->
+        <!-- El atributo id es para una etiqueta, el de class para un conjunto de etiquetas -->
+        <h1 id="titulo">Blog de Akima</h1>
+    </header> 
+    <div> <!-- Misma funcion de seccion para dividir contenido -->
+        <p> Soy un parrafo dentro de un div</p>
+    </div>
+    <section class="container">
+        <article class="post"> <!-- Contenido independiente -->
+            <h2>Titulo de mi post</h2>
+            <p>Descripcion de mi post</p>
+            <img src="img/img1.jpeg" width="200"/>
+            <p>Texto del articulo que hay aca y es texto de prueba. Chanchito feliz!</p>
+        </article>
+        <article class="post"> 
+            <h2>Titulo de mi post 2</h2>
+            <p>Descripcion de mi post 2</p>
+            <img src="img/img2.jpeg" width="200"/>
+            <p>Texto del articulo que hay aca y es texto de prueba. Chanchito feliz!</p>
+        </article>
+        <article class="post"> 
+            <h2>Titulo de mi post 3</h2>
+            <p>Descripcion de mi post 3</p>
+            <img src="img/img3.jpeg" width="200"/>
+            <p>Texto del articulo que hay aca y es texto de prueba. Chanchito feliz!</p>
+        </article>
+    </section> 
+    <footer> <!-- Pie de pagina (copyright, info contacto, etc)-->
+        <a href="#titulo" class="link">Ir al comienzo</a><br> <!-- # solo sirve para id -->
+        <a href="mailto:alyson.cuentas@gmail.com" class="link">Contactame aqui</a>
+        <p>copyright 2021</p>
+    </footer> 
+</body>
+</html>
